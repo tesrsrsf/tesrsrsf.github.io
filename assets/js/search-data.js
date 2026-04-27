@@ -52,11 +52,6 @@ ninja.data = [{
           description: "Undergraduate Research Project on Line-level Machine-generated Code Detection",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-foodie",
-          title: 'Foodie',
-          description: "Capstone design project on a recipe recommendation system.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
             },},{id: "projects-skillswap",
           title: 'SkillSwap',
           description: "Term project for Introduction to Software Engineering",
