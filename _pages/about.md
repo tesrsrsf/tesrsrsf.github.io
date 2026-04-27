@@ -27,8 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an undergraduate student in Computer Science and Engineering at Sungkyunkwan University. My interests center on natural language processing and reliable software systems, with hands-on experience using Python, PyTorch, Git, Docker, and PostgreSQL.
+I am an undergraduate student in Computer Science and Engineering at Sungkyunkwan University, interested in natural language processing and research-driven software development.
 
-I am currently involved with the Human Language Intelligence Lab, where I have worked on dataset construction and analysis for the LiMO project on line-level machine-generated code detection. I also served as a teaching assistant for the Open-Source Software Practice course, supporting Q&A sessions and grading.
-
-My first publication, "LiMO: Line-level Machine-generated Code Detection for Diverse Programming Languages," has been accepted to the 41st ACM/SIGAPP Symposium on Applied Computing (SAC 2026).
+My recent work has focused on language technology and machine-generated code detection. I enjoy building practical systems and contributing to collaborative projects that connect computer science with real-world problems.
