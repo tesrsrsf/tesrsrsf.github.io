@@ -5,7 +5,6 @@ description: Undergraduate Research Project on Line-level Machine-generated Code
 img: 
 importance: 1
 category: work
-related_publications: true
 ---
 
 Line-level Machine-generated code detection based on coding style, perplexity, and approximated task conditioning, Based on ***LiMO***, inspired by the [***ATC***](https://arxiv.org/abs/2506.06069) paper.
