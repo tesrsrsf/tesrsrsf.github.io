@@ -89,7 +89,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name:  Blog # blog_name will be displayed in your blog page
+blog_name: Jin's Idea Playground # blog_name will be displayed in your blog page
 blog_description: A place where I share my thoughts about everything. # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
