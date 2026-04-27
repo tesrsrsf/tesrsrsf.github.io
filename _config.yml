@@ -12,7 +12,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Hi, Welcome to my homepage! I am a undergraduate student at Sungkyunkwan University, majoring in Computer Science and Engineering. You can find information about me here.
 footer_text: >
 
-keywords: computer-science, undergraduate, sungkyunkwan-university, natural-language-processing # add your own keywords or leave empty
+keywords: jin zhenming, kim jinmyung, skku, cs, computer science, undergraduate, sungkyunkwan university, natural language processing # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
