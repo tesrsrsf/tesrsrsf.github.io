@@ -4,14 +4,14 @@
 
 title: Jin Zhenming's Homepage  # the website title (if blank, full name will be used instead)
 first_name: Jin
-middle_name: ""
+middle_name: 
 last_name: Zhenming
 contact_note: >
-  If you want to get in touch, please email me
+  If you want to get in touch, please email me at jinzhenming74@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Hi, Welcome to my homepage! I am a undergraduate student at Sungkyunkwan University, majoring in Computer Science and Engineering. You can find information about me here. 
 footer_text: >
-  ""
+
 keywords: computer-science, undergraduate, sungkyunkwan-university, natural-language-processing # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -89,8 +89,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Jin's Blog # blog_name will be displayed in your blog page
+blog_description: A place where I share my thoughts about everything related to computer science, technology, and life in general. # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -153,7 +153,7 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post
@@ -161,7 +161,7 @@ collections:
   projects:
     output: true
   teachings:
-    output: true
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
