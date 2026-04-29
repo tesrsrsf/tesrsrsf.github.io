@@ -2,12 +2,12 @@ cv:
   name: Jin Zhenming
   label: Undergraduate Student in Computer Science
   email: jinzhenming74@gmail.com
-  location: Chaoyang, Beijing, China / Suwon, Korea
+  location: Beijing, China / Suwon, Korea
   image: ""
   summary: Undergraduate student in Computer Science with experience in natural language processing. Experienced with Python and PyTorch, and familiar with GitHub-based workflows. Detail-oriented and motivated to contribute to research and collaborative projects.
 
   address:
-    city: Chaoyang, Beijing / Suwon
+    city: Beijing / Suwon
     region: China / Korea
 
   sections:
@@ -17,7 +17,7 @@ cv:
         area: Computer Science and Engineering
         studyType: Bachelor of Computer Science and Engineering
         start_date: Sep 2022
-        end_date: Jul 2026
+        end_date: Present
         score: GPA 3.92/4.5
         highlights:
           - "GPA: 3.92/4.5"

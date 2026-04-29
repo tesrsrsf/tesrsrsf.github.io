@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Suwon, Korea</p>
-    <p>Chaoyang, Beijing, China</p>
+    <p>Beijing, China</p>
     <p><a href="mailto:jinzhenming74@gmail.com">jinzhenming74@gmail.com</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
