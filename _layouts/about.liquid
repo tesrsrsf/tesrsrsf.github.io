@@ -43,7 +43,9 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">
+          <span data-lang="en">news</span><span data-lang="zh">新闻</span>
+        </a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -51,7 +53,9 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">
+          <span data-lang="en">latest posts</span><span data-lang="zh">最新文章</span>
+        </a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
@@ -59,7 +63,9 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">
+          <span data-lang="en">selected publications</span><span data-lang="zh">精选论文</span>
+        </a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

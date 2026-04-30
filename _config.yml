@@ -7,7 +7,7 @@ first_name: Jin
 middle_name:
 last_name: Zhenming
 contact_note: >
-  If you want to get in touch, please email me at jinzhenming74@gmail.com
+  <span data-lang="en">If you want to get in touch, please email me at jinzhenming74@gmail.com</span><span data-lang="zh">如需联系，请发送邮件至 jinzhenming74@gmail.com</span>
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Hi, Welcome to my homepage! I am a undergraduate student at Sungkyunkwan University, majoring in Computer Science and Engineering. You can find information about me here.
 footer_text: >
