@@ -135,6 +135,15 @@
               </button>
             </li>
           {% endif %}
+          {% if site.enable_lang_toggle %}
+            <!-- Language Toggle -->
+            <li class="toggle-container">
+              <button id="lang-toggle" title="Switch language / 切换语言">
+                <span id="lang-toggle-en">EN</span>
+                <span id="lang-toggle-zh">中</span>
+              </button>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>

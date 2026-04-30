@@ -603,3 +603,13 @@ figure.cover {
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
 }
+
+/* Language-conditional content */
+html[data-language="en"] [data-lang="zh"],
+html:not([data-language]) [data-lang="zh"] {
+  display: none !important;
+}
+
+html[data-language="zh"] [data-lang="en"] {
+  display: none !important;
+}
