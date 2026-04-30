@@ -1,10 +1,10 @@
 cv:
-  name: Jin Zhenming
+  name: Jin Zhenming (金真明)
   label: Undergraduate Student in Computer Science
   label_zh: 计算机科学本科生
   email: jinzhenming74@gmail.com
   location: Beijing, China / Suwon, Korea
-  location_zh: 中国北京 / 韩国水原
+  location_zh: 中国, 北京 / 韩国, 水原
   image: ""
   summary: Undergraduate student in Computer Science with experience in natural language processing. Experienced with Python and PyTorch, and familiar with GitHub-based workflows. Detail-oriented and motivated to contribute to research and collaborative projects.
   summary_zh: 计算机科学本科生，具有自然语言处理研究经验，熟练使用 Python 和 PyTorch，并熟悉基于 GitHub 的协作工作流。注重细节，积极参与科研项目与团队合作。
@@ -45,7 +45,7 @@ cv:
           - Advised by Prof. Jinyeong Bak (박진영).
         highlights_zh:
           - 与研究生合作，构建并分析了 LiMO（DetectMGC）项目的数据集。
-          - 指导教授：朴镇英（박진영）。
+          - 指导教授：Bak Jinyeong（박진영）
 
       - company: Sungkyunkwan University
         position: Teaching Assistant
