@@ -50,16 +50,15 @@
           </table>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          {% capture position_title %}
-            {% if entry.position %}{{ entry.position }}{% endif %}
-          {% endcapture %}
+          {% capture position_title %}{% if entry.position %}{{ entry.position }}{% endif %}{% endcapture %}
+          {% capture position_title_zh %}{% if entry.position_zh %}{{ entry.position_zh }}{% endif %}{% endcapture %}
 
           {% if entry.url %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">
-              <a href="{{ entry.url }}">{{ position_title }}</a>
+              <a href="{{ entry.url }}"><span data-lang="en">{{ position_title }}</span>{% if position_title_zh != '' %}<span data-lang="zh">{{ position_title_zh }}</span>{% endif %}</a>
             </h6>
           {% elsif position_title != '' %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ position_title }}</h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><span data-lang="en">{{ position_title }}</span>{% if position_title_zh != '' %}<span data-lang="zh">{{ position_title_zh }}</span>{% endif %}</h6>
           {% endif %}
 
           {% capture company_name %}
@@ -78,10 +77,13 @@
           {% if entry.highlights %}
             <ul class="items">
               {% for item in entry.highlights %}
-                <li>
-                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-                </li>
+                <li data-lang="en"><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
               {% endfor %}
+              {% if entry.highlights_zh %}
+                {% for item in entry.highlights_zh %}
+                  <li data-lang="zh"><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+                {% endfor %}
+              {% endif %}
             </ul>
           {% endif %}
         </div>

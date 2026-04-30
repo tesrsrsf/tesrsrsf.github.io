@@ -63,46 +63,44 @@ layout: default
         <!-- Header/Contact Information -->
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Contact Information</h3>
+            <h3 class="card-title font-weight-medium"><span data-lang="en">Contact Information</span><span data-lang="zh">联系信息</span></h3>
             <table class="table table-cv table-sm table-borderless">
               {% if cv.name %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Name</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Name</span><span data-lang="zh">姓名</span></b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
                 </tr>
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
-                  <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Professional Title</span><span data-lang="zh">职位</span></b></td>
+                  <td class="p-1 pl-2 font-weight-light"><span data-lang="en">{{ cv.label }}</span>{% if cv.label_zh %}<span data-lang="zh">{{ cv.label_zh }}</span>{% endif %}</td>
                 </tr>
               {% endif %}
               {% if cv.email %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Email</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Email</span><span data-lang="zh">邮箱</span></b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
                 </tr>
               {% endif %}
               {% if cv.phone %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Phone</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Phone</span><span data-lang="zh">电话</span></b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.phone }}</td>
                 </tr>
               {% endif %}
               {% if cv.address %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Location</span><span data-lang="zh">地址</span></b></td>
                   <td class="p-1 pl-2 font-weight-light">
-                    {% if cv.address.street %}{{ cv.address.street }}, {% endif %}
-                    {% if cv.address.city %}{{ cv.address.city }}, {% endif %}
-                    {% if cv.address.region %}{{ cv.address.region }} {% endif %}
-                    {% if cv.address.postalCode %}{{ cv.address.postalCode }}{% endif %}
+                    <span data-lang="en">{% if cv.address.street %}{{ cv.address.street }}, {% endif %}{% if cv.address.city %}{{ cv.address.city }}, {% endif %}{% if cv.address.region %}{{ cv.address.region }}{% endif %}{% if cv.address.postalCode %} {{ cv.address.postalCode }}{% endif %}</span>
+                    {% if cv.address.city_zh or cv.address.region_zh %}<span data-lang="zh">{% if cv.address.city_zh %}{{ cv.address.city_zh }}，{% endif %}{% if cv.address.region_zh %}{{ cv.address.region_zh }}{% endif %}</span>{% endif %}
                   </td>
                 </tr>
               {% endif %}
               {% if cv.website %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Website</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b><span data-lang="en">Website</span><span data-lang="zh">网站</span></b></td>
                   <td class="p-1 pl-2 font-weight-light">
                     <a href="{{ cv.website }}" target="_blank">{{ cv.website }}</a>
                   </td>
@@ -115,8 +113,8 @@ layout: default
         <!-- Summary -->
         {% if cv.summary %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
-            <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            <h3 class="card-title font-weight-medium"><span data-lang="en">Professional Summary</span><span data-lang="zh">个人简介</span></h3>
+            <p><span data-lang="en">{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% if cv.summary_zh %}<span data-lang="zh">{{ cv.summary_zh | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}</p>
           </div>
         {% endif %}
 
@@ -129,7 +127,7 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium"><span data-lang="en">Experience</span><span data-lang="zh">工作经历</span></h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}
@@ -149,7 +147,13 @@ layout: default
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+            {% if section_title == 'Education' %}{% assign section_title_zh = '教育背景' %}
+            {% elsif section_title == 'Publications' %}{% assign section_title_zh = '论文发表' %}
+            {% elsif section_title == 'Skills' %}{% assign section_title_zh = '技能' %}
+            {% elsif section_title == 'Languages' %}{% assign section_title_zh = '语言' %}
+            {% elsif section_title == 'References' %}{% assign section_title_zh = '推荐人' %}
+            {% else %}{% assign section_title_zh = '' %}{% endif %}
+            <h3 class="card-title font-weight-medium"><span data-lang="en">{{ section_title }}</span>{% if section_title_zh != '' %}<span data-lang="zh">{{ section_title_zh }}</span>{% endif %}</h3>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -268,7 +272,7 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium"><span data-lang="en">Experience</span><span data-lang="zh">经历</span></h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}

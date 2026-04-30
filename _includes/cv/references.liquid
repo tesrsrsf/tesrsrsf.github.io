@@ -9,7 +9,7 @@
         <i class="{{ entry.icon }}"></i>
       {% endif %}
       <strong>{{ entry.name }}</strong>
-      <p>{{ entry.reference | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      <p><span data-lang="en">{{ entry.reference | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% if entry.reference_zh %}<span data-lang="zh">{{ entry.reference_zh | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}</p>
     </li>
   {% endfor %}
 </ul>

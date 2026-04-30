@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+title_zh: 项目
 permalink: /projects/
 description: This page might never be complete.
 nav: true

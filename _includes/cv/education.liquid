@@ -52,16 +52,15 @@
           </table>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
-          {% capture study_type %}
-            {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
-          {% endcapture %}
+          {% capture study_type %}{% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}{% endcapture %}
+          {% capture study_type_zh %}{% if entry.studyType_zh %}{{ entry.studyType_zh }}{% endif %}{% endcapture %}
 
           {% if entry.url %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">
-              <a href="{{ entry.url }}">{{ study_type }}</a>
+              <a href="{{ entry.url }}"><span data-lang="en">{{ study_type }}</span>{% if study_type_zh != '' %}<span data-lang="zh">{{ study_type_zh }}</span>{% endif %}</a>
             </h6>
           {% elsif study_type != '' %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ study_type }}</h6>
+            <h6 class="title font-weight-bold ml-1 ml-md-4"><span data-lang="en">{{ study_type }}</span>{% if study_type_zh != '' %}<span data-lang="zh">{{ study_type_zh }}</span>{% endif %}</h6>
           {% endif %}
 
           {% if entry.institution %}
@@ -69,21 +68,22 @@
           {% endif %}
 
           {% if entry.area %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic"><span data-lang="en">{{ entry.area }}</span>{% if entry.area_zh %}<span data-lang="zh">{{ entry.area_zh }}</span>{% endif %}</h6>
           {% endif %}
 
           {% if entry.courses or entry.highlights %}
             <ul class="items">
               {% for item in entry.courses %}
-                <li>
-                  <span class="item">{{ item }}</span>
-                </li>
+                <li><span class="item">{{ item }}</span></li>
               {% endfor %}
               {% for item in entry.highlights %}
-                <li>
-                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-                </li>
+                <li data-lang="en"><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
               {% endfor %}
+              {% if entry.highlights_zh %}
+                {% for item in entry.highlights_zh %}
+                  <li data-lang="zh"><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+                {% endfor %}
+              {% endif %}
             </ul>
           {% endif %}
         </div>

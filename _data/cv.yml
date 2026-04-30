@@ -1,46 +1,64 @@
 cv:
   name: Jin Zhenming
   label: Undergraduate Student in Computer Science
+  label_zh: 计算机科学本科生
   email: jinzhenming74@gmail.com
   location: Beijing, China / Suwon, Korea
+  location_zh: 中国北京 / 韩国水原
   image: ""
   summary: Undergraduate student in Computer Science with experience in natural language processing. Experienced with Python and PyTorch, and familiar with GitHub-based workflows. Detail-oriented and motivated to contribute to research and collaborative projects.
+  summary_zh: 计算机科学本科生，具有自然语言处理研究经验，熟练使用 Python 和 PyTorch，并熟悉基于 GitHub 的协作工作流。注重细节，积极参与科研项目与团队合作。
 
   address:
     city: Beijing / Suwon
+    city_zh: 北京 / 水原
     region: China / Korea
+    region_zh: 中国 / 韩国
 
   sections:
     Education:
       - institution: Sungkyunkwan University (성균관대학교)
         location: Suwon, Korea
         area: Computer Science and Engineering
+        area_zh: 计算机科学与工程
         studyType: Bachelor of Computer Science and Engineering
+        studyType_zh: 计算机科学与工程学士
         start_date: Sep 2022
         end_date: Present
         score: GPA 3.92/4.5
         highlights:
           - "GPA: 3.92/4.5"
           - Merit-based Scholarship for International Undergraduate Students
+        highlights_zh:
+          - "GPA：3.92/4.5"
+          - 国际本科生优秀奖学金
 
     Experience:
       - company: Human Language Intelligence Lab (HLI Lab)
         position: Undergraduate Intern
+        position_zh: 本科实习生
         location: Suwon, Korea
         start_date: May 2025
         end_date: Dec 2025
         highlights:
           - Constructed and analyzed datasets for the LiMO (DetectMGC) project in collaboration with graduate researchers.
           - Advised by Prof. Jinyeong Bak (박진영).
+        highlights_zh:
+          - 与研究生合作，构建并分析了 LiMO（DetectMGC）项目的数据集。
+          - 指导教授：朴镇英（박진영）。
 
       - company: Sungkyunkwan University
         position: Teaching Assistant
+        position_zh: 助教
         location: Suwon, Korea
         start_date: Sep 2025
         end_date: Dec 2025
         highlights:
           - Worked as a teaching assistant for the course "Open-Source Software Practice" conducted by HLI Lab.
           - Answered students' questions during Q&A sessions and graded assignments and the final exam.
+        highlights_zh:
+          - 担任 HLI 实验室开设的"开源软件实践"课程助教。
+          - 在答疑环节解答学生问题，并负责批改作业和期末考试。
 
     Publications:
       - title: "LiMO: Line-level Machine-generated Code Detection for Diverse Programming Languages"
@@ -73,17 +91,26 @@ cv:
 
     Languages:
       - name: Chinese
+        name_zh: 中文
         summary: Native (First Language)
+        summary_zh: 母语
 
       - name: Korean
+        name_zh: 韩语
         summary: Fluent
+        summary_zh: 流利
 
       - name: English
+        name_zh: 英语
         summary: IELTS 7.5 (CEFR C1)
+        summary_zh: 雅思 7.5 分（CEFR C1）
 
       - name: Japanese
+        name_zh: 日语
         summary: JLPT N2 (CEFR B1~B2)
+        summary_zh: JLPT N2（CEFR B1~B2）
 
     References:
       - name: References
         reference: Available upon request.
+        reference_zh: 如需推荐信，请联系本人。
