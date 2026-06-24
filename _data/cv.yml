@@ -102,15 +102,15 @@ cv:
 
       - name: English
         name_zh: 英语
-        summary: IELTS 7.5 (CEFR C1)
-        summary_zh: 雅思 7.5 分（CEFR C1）
+        summary: IELTS 7.5
+        summary_zh: IELTS 7.5 分
 
       - name: Japanese
         name_zh: 日语
-        summary: JLPT N2 (CEFR B1~B2)
-        summary_zh: JLPT N2（CEFR B1~B2）
+        summary: JLPT N2
+        summary_zh: JLPT N2
 
     References:
       - name: References
         reference: Available upon request.
-        reference_zh: 如需推荐信，请联系本人。
+        reference_zh: Available upon request.
