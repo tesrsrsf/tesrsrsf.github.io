@@ -23,13 +23,40 @@ $(document).ready(function () {
     $(".publications h2").each(function () {
       $(this).attr("data-toc-skip", "");
     });
+
+    // Set data-toc-text on bilingual headings to only the active language's text,
+    // preventing bootstrap-toc from concatenating both EN and ZH spans.
+    var updateTocText = function () {
+      var lang = document.documentElement.getAttribute("data-language") || "en";
+      $("h1, h2, h3, h4, h5, h6").each(function () {
+        var $active = $(this).find('[data-lang="' + lang + '"]');
+        if ($active.length) {
+          $(this).attr("data-toc-text", $active.text().trim());
+        }
+      });
+    };
+
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
+
+    updateTocText();
     Toc.init($myNav);
     $("body").scrollspy({
       target: navSelector,
       offset: 100,
     });
+
+    // Rebuild TOC when language is toggled
+    var tocLangObserver = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        if (mutation.attributeName === "data-language") {
+          updateTocText();
+          $myNav.empty();
+          Toc.init($myNav);
+        }
+      });
+    });
+    tocLangObserver.observe(document.documentElement, { attributes: true });
   }
 
   // add css to jupyter notebooks
