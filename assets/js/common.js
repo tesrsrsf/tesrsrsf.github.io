@@ -26,12 +26,14 @@ $(document).ready(function () {
 
     // Set data-toc-text on bilingual headings to only the active language's text,
     // preventing bootstrap-toc from concatenating both EN and ZH spans.
+    // Use jQuery's .data() (not .attr()) so bootstrap-toc's .data("toc-text") reads
+    // the updated value instead of the stale jQuery-internal cache.
     var updateTocText = function () {
       var lang = document.documentElement.getAttribute("data-language") || "en";
       $("h1, h2, h3, h4, h5, h6").each(function () {
         var $active = $(this).find('[data-lang="' + lang + '"]');
         if ($active.length) {
-          $(this).attr("data-toc-text", $active.text().trim());
+          $(this).data("toc-text", $active.text().trim());
         }
       });
     };
