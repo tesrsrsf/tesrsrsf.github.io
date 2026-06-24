@@ -1,6 +1,7 @@
 ---
 layout: about
-title: about
+title: About
+title_zh: 首页
 permalink: /
 subtitle: >
   <span data-lang="en">Computer Science undergraduate at Sungkyunkwan University</span><span data-lang="zh">成均馆大学计算机科学与工程系本科生</span>

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 title_zh: 论文
 description: Selected publications and accepted papers.
 nav: true
