@@ -2,7 +2,7 @@ cv:
   name: Jin Zhenming (金真明)
   label: Undergraduate Student in Computer Science
   label_zh: 计算机科学本科生
-  email: jinzhenming74@gmail.com
+  email: jinzhenming266@outlook.com
   location: Beijing, China / Suwon, Korea
   location_zh: 中国, 北京 / 韩国, 水原
   image: ""
@@ -103,7 +103,7 @@ cv:
       - name: English
         name_zh: 英语
         summary: IELTS 7.5
-        summary_zh: IELTS 7.5 分
+        summary_zh: IELTS 7.5
 
       - name: Japanese
         name_zh: 日语
