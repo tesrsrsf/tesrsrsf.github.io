@@ -13,7 +13,7 @@ profile:
   more_info: >
     <p><span data-lang="en">Suwon, Korea</span><span data-lang="zh">韩国水原</span></p>
     <p><span data-lang="en">Beijing, China</span><span data-lang="zh">中国北京</span></p>
-    <p><a href="mailto:jinzhenming74@gmail.com">jinzhenming74@gmail.com</a></p>
+    <p><a href="mailto:jinzhenming266@outlook.com">jinzhenming266@outlook.com</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
